@@ -1,0 +1,47 @@
+{% extends 'admin-page/base.html' %} 
+{% block main %}
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-info shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Model Available
+                    </div>
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{abb}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-mobile fa-2x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="main-container">
+    <div class="elts">
+      <div class="main-block">
+        <h1>Add new Model</h1>
+        <form method="POST">
+          {% csrf_token %}
+          <hr>
+          <label id="icon" for="name"><i class="fas fa-pen"></i> Model Name</label>
+          <input type="text" style="margin-top: 10px;" name="one" id="name" placeholder="Enter the name" required/><br><br>
+          <label id="icon" for="name"><i class="fas fa-pen"></i> Brand Name</label>
+          <select name="two" id="">
+           {% for b in brand %}    
+           <option value="{{b.id}}">{{b.name}}</option> 
+           {% endfor %}
+          </select>
+          <hr>
+          <div class="btn-block">
+            <button type="submit" name="add">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}

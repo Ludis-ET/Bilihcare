@@ -1,0 +1,293 @@
+Traceback (most recent call last):
+  File "/home/bilihcarecom/public_html/bilihcare/passenger_wsgi.py", line 16, in <module>
+    from ludis.wsgi import application
+  File "/home/bilihcarecom/public_html/bilihcare/ludis/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ModuleNotFoundError: No module named 'django'
+Traceback (most recent call last):
+  File "/home/bilihcarecom/public_html/bilihcare/passenger_wsgi.py", line 16, in <module>
+    from ludis.wsgi import application
+  File "/home/bilihcarecom/public_html/bilihcare/ludis/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ModuleNotFoundError: No module named 'django'
+[UID:3464][1553100] Child process with pid: 1553120 was killed by signal: 15, core dump: 0
+Not Found: /static/images/review-bg.jpg
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /static/images/review-bg.jpg
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: /static/css/images/chef-order.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /static/images/review-bg.jpg
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /static/css/images/chef-order.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /favicon.ico
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /img/header_bg.png
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /static/images/review-bg.jpg
+Not Found: //static/js/js/functions.js
+Not Found: //static/js/main.js
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /wordpress
+Not Found: /wp
+Not Found: /new
+Not Found: /old
+Not Found: /test
+Not Found: /main
+Not Found: /testing
+Not Found: /robots.txt
+Not Found: /favicon.ico
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: //wp-content/plugins/fix/up.php
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/css/images/chef-order.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /wordpress
+Not Found: /wp
+Not Found: /new
+Not Found: /old
+Not Found: /test
+Not Found: /main
+Not Found: /testing
+Not Found: /robots.txt
+Not Found: /favicon.ico
+Not Found: /robots.txt
+Not Found: /static/images/review-bg.jpg
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /.env
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /static/images/review-bg.jpg
+Not Found: /robots.txt
+Not Found: /static/images/review-bg.jpg
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+[UID:3464][1354913] Child process with pid: 1390182 was killed by signal: 15, core dump: 0
+Not Found: /robots.txt
+Not Found: /sitemap.txt
+Not Found: /db.php
+Not Found: /sitemap.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /sitemap.txt
+Not Found: /robots.txt
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /favicon.ico
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /robots.txt
+Not Found: /static/images/review-bg.jpg
+Not Found: /robots.txt
+Not Found: /sitemap.xml
+Not Found: /security.txt
+Not Found: /.well-known/security.txt
+Not Found: /humans.txt
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Forbidden (CSRF cookie not set.): /login/
+Not Found: /favicon.ico
+Forbidden (CSRF cookie not set.): /login/
+Forbidden (CSRF cookie not set.): /login/
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Forbidden (CSRF cookie not set.): /register/
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js
+Not Found: /static/images/review-bg.jpg
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /humans.txt
+Not Found: /static/images/review-bg.jpg
+Not Found: /sitemap.xml
+Not Found: /robots.txt
+Not Found: /sitemap.xml.gz
+Not Found: /robots.txt
+Not Found: /media/admin-page/vendor/jquery/jquery.min.js
+Not Found: /media/admin-page/js/sb-admin-2.min.js
+Not Found: /media/admin-page/vendor/jquery-easing/jquery.easing.min.js
+Not Found: /sitemap.xml.gz
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /sitemap.xml.gz
+Not Found: /sitemap.xml.gz
+Not Found: /static/images/review-bg.jpg
+Not Found: /favicon.ico
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /sitemap.xml
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /media/logo_Ihd4yPO.png
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+[UID:3464][223056] Child process with pid: 224774 was killed by signal: 15, core dump: 0
+Not Found: /static/images/review-bg.jpg
+Not Found: /static/images/review-bg.jpg
+Not Found: /favicon.ico
+Not Found: /robots.txt
+Not Found: /wordpress
+Not Found: /wp
+Not Found: /new
+Not Found: /old
+Not Found: /test
+Not Found: /main
+Not Found: /testing
+Not Found: /sitemap.xml
+Not Found: /robots.txt
+Not Found: /static/images/review-bg.jpg
+Not Found: /wordpress
+Not Found: /wp
+Not Found: /new
+Not Found: /old
+Not Found: /test
+Not Found: /main
+Not Found: /testing
+Not Found: /db.php
+Not Found: /favicon.ico
+Not Found: /db.php
+Not Found: /db.php
+Not Found: /db.php
+Not Found: /db.php
+Not Found: /favicon.ico
+[UID:3464][1962696] [UID:3464][1962696] Child process with pid: 1962726 was killed by signal: 15, core dump: 0
+[UID:3464][1962696] Child process with pid: 1962876 was killed by signal: 15, core dump: 0
+[UID:3464][1962696] Child process with pid: 1962877 was killed by signal: 15, core dump: 0
+Reached max children process limit: 6, extra: 2, current: 8, busy: 6, please increase LSAPI_CHILDREN.
+[UID:3464][1962696] Child process with pid: 1962875 was killed by signal: 15, core dump: 0
+[UID:3464][1962696] Child process with pid: 1962724 was killed by signal: 15, core dump: 0
+[UID:3464][1962696] Child process with pid: 1962874 was killed by signal: 15, core dump: 0
+[UID:3464][1962699] Child process with pid: 1962729 was killed by signal: 15, core dump: 0
+[UID:3464][1962699] Child process with pid: 1962882 was killed by signal: 15, core dump: 0
+[UID:3464][1962699] Child process with pid: 1962884 was killed by signal: 15, core dump: 0
+[UID:3464][1962699] Child process with pid: 1962885 was killed by signal: 15, core dump: 0
+[UID:3464][1962699] Child process with pid: 1962730 was killed by signal: 15, core dump: 0
+[UID:3464][1962699] Child process with pid: 1962883 was killed by signal: 15, core dump: 0

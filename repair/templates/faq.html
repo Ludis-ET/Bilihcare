@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Support{% endblock %}
+{% block name %}FAQ{% endblock %}
+{% block main %}
+<section id="faq" class="padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+      <h2 class="heading">Frequently ask Questions</h2>
+      <hr class="heading_space">
+        <div class='faq_wrapper'>
+          <ul class='items'>
+             
+              {% for a in ab %}
+              <li>
+                <a href='#'> {{a.question}}</a>
+                <ul class='sub-items'>
+                  <li>
+                    <p class="half_space">{{a.answer}}</p>
+                  </li>
+                </ul>
+              </li>
+              {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

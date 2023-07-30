@@ -1,0 +1,96 @@
+{% extends 'admin-page/base.html' %} 
+{% block main %}
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-info shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Applies
+                    </div>
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{a}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-user fa-2x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="main-container" style="display: flex; flex-wrap: wrap;">
+    {% for c in b %}
+    {% if c.approved == False %}
+    <div class="elts" style="max-width: 300px;">
+    <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div
+            class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">Apply from {{c.name}}</h6>
+            <div class="dropdown no-arrow">
+                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                    aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-header">Actions:</div>
+                    {% if c.email %}
+                    <a class="dropdown-item" href="mailto:{{c.email}}">{{c.email}}</a>
+                    {% endif %}
+                    <a class="dropdown-item" href="#">{{c.phone}}</a>
+                    <div class="dropdown-divider"></div>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="one" value="{{c.id}}">
+                    <button type="submit" class="dropdown-item" href="#">Approve</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+            <p>{{c.others}}</p>
+            <div><a href="#" class="btn btn-info btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-user"></i>
+                </span>
+                <span class="text">{{c.name}}</span>
+            </a></div><br>
+            {% if c.user %}
+            <div><a href="#" class="btn btn-info btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-pen"></i>
+                </span>
+                <span class="text">User is our customer</span>
+            </a></div><br>
+            {% else %}
+            <div><a href="#" class="btn btn-info btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-pen"></i>
+                </span>
+                <span class="text">User is not Our customer</span>
+            </a></div><br>
+            {% endif %}
+            <div><a href="#" class="btn btn-info btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-clock"></i>
+                </span>
+                <span class="text">{{c.date}}</span>
+            </a></div><br>
+            <div><a href="{{c.file.url}}" class="btn btn-info btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-download"></i>
+                </span>
+                <span class="text">Download Cv or Resume here</span>
+            </a></div><br>
+        </div>
+    </div>
+    
+</div>
+{% endif %}
+    {% endfor %}
+</div>
+{% endblock %}

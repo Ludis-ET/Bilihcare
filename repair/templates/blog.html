@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{web.name}} - BlogPost</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{{web.icon.url}}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/static/blog/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/static/blog/css/style.css" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    
+    <link rel="stylesheet" type="text/css" href="/static/css/css/loader.css">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510615875274346"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="loader"> 
+        <div class="cssload-container">
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+        </div>
+     </div>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center bg-dark px-lg-5">
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-sm bg-dark p-0">
+                    <ul class="navbar-nav ml-n2">
+                        <li class="nav-item border-right border-secondary">
+                            <a class="nav-link text-body small" id="date"></a>
+                        </li>
+                        {% if User.is_authenticated %}
+                    <li class="nav-item border-right border-secondary">
+                        <a class="nav-link text-body small" href="{% url 'repair:profile' %}">Profile</a></li>
+                    {% else %}
+                    <li class="nav-item border-right border-secondary">
+                        <a class="nav-link text-body small" href="{% url 'repair:login' %}">Login</a></li>
+                    {% endif %}
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-3 text-right d-none d-md-block">
+                <nav class="navbar navbar-expand-sm bg-dark p-0">
+                    <ul class="navbar-nav ml-auto mr-n2">
+                        {% if web.facebook %}
+        <li  class="nav-item"><a href="{{web.facebook}}" class="nav-link text-body" ><small class="fab fa-facebook-f"></small></a></li>
+        {% endif %}
+        {% if web.telegram %}
+        <li  class="nav-item"><a href="{{web.telegram}}" class="nav-link text-body" ><small class="fab fa-telegram"></small></a></li>
+        {% endif %}
+        {% if web.instagram %}
+        <li  class="nav-item"><a href="{{web.instagram}}" class="nav-link text-body" ><small class="fab fa-instagram"></small></a></li>
+        {% endif %}
+        {% if web.youtube %}
+        <li  class="nav-item"><a href="{{web.youtube}}" class="nav-link text-body" ><small class="fab fa-youtube"></small></a></li>
+        {% endif %}
+        {% if web.tiktok %}
+        <li  class="nav-item"><a href="{{web.tiktok}}" class="nav-link text-body" ><small class="fab fa-tiktok"></small></a></li>
+        {% endif %}
+        {% if web.email %}
+        <li  class="nav-item"><a href="mailto:{{web.email}}" class="nav-link text-body" ><small class="fa fa-envelope"></small></a></li>
+        {% endif %}
+        {% if web.twitter %}
+        <li  class="nav-item"><a href="{{web.twitter}}" class="nav-link text-body" ><small class="fab fa-twitter"></small></a></li>
+        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-8 text-center text-lg-left">
+                <a href="{% url 'repair:index' %}"><img style="width:200px;background: #333;padding: 10px;border-radius: 10px;" class="img-fluid" src="/static/images/logo.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510615875274346"
+     crossorigin="anonymous"></script>
+<!-- box -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6510615875274346"
+     data-ad-slot="9424338579"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="{% url 'repair:index' %}" class="nav-item nav-link ">Home</a>
+                    <a href="{% url 'repair:blog' %}" class="nav-item nav-link active">Blog</a>
+                    <a href="{% url 'repair:about' %}" class="nav-item nav-link">About Us</a>
+                    <a href="{% url 'repair:faq' %}" class="nav-item nav-link">FAQ</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            {% for c in category %}
+                            <a href="{% url 'repair:category' c.id %}" class="dropdown-item">{{c.name}}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Main News Slider Start -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-7 px-0">
+                <div class="owl-carousel main-carousel position-relative">
+                    {% if one %}
+                    {% for o in one %}
+                    <div class="position-relative overflow-hidden" style="height: 500px;">
+                        <img class="img-fluid h-100" src="{{o.profile.url}}" style="object-fit: cover;">
+                        <div class="overlay">
+                            <div class="mb-2">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                    href="{% url 'repair:category' o.category.id %}">{{o.category}}</a>
+                                <a class="text-white">{{o.date}}</a>
+                            </div>
+                            <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="{% url 'repair:post' o.id %}">{{o.one_topic}}</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-lg-5 px-0">
+                <div class="row mx-0">
+                    {% if two %}
+                    {% for t in two|slice:"0:4" %}
+                    <div class="col-md-6 px-0">
+                        <div class="position-relative overflow-hidden" style="height: 250px;">
+                            <img class="img-fluid w-100 h-100" src="{{t.profile.url}}" style="object-fit: cover;">
+                            <div class="overlay">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                        href="{% url 'repair:category' t.category.id %}">{{t.category}}</a>
+                                    <a class="text-white"><small>{{t.date}}</small></a>
+                                </div>
+                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{% url 'repair:post' t.id %}">{{t.one_topic}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main News Slider End -->
+
+
+    <!-- Breaking News Start -->
+    <div class="container-fluid bg-dark py-3 mb-3">
+        <div class="container">
+            <div class="row align-items-center bg-dark">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between">
+                        <div class="bg-primary text-dark text-center font-weight-medium py-2" style="width: 170px;">Blog Posts</div>
+                        <div class="owl-carousel tranding-carousel position-relative d-inline-flex align-items-center ml-3"
+                            style="width: calc(100% - 170px); padding-right: 90px;">
+                            {% for p in post %}
+                            <div class="text-truncate"><a class="text-white text-uppercase font-weight-semi-bold" href="{% url 'repair:post' p.id %}">{{p.one_topic}}</a></div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breaking News End -->
+
+
+    {% if three %}
+    <!-- Featured News Slider Start -->
+    <div class="container-fluid pt-5 mb-3">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="m-0 text-uppercase font-weight-bold">Featured Posts</h4>
+            </div>
+            <div class="owl-carousel news-carousel carousel-item-4 position-relative">
+                {% for t in three %}
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid h-100" src="{{t.profile.url}}" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-2">
+                            <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                href="{% url 'repair:category' t.category.id %}">{{t.category}}</a>
+                            <a class="text-white"><small>{{t.date}}</small></a>
+                        </div>
+                        <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="{% url 'repair:post' t.id %}">{{t.one_topic|slice:":16"}}...</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <!-- Featured News Slider End -->
+
+
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                {% if four %}
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-title">
+                                <h4 class="m-0 text-uppercase font-weight-bold">Other Posts</h4>
+                            </div>
+                        </div>
+                        {% for f in four %}
+                        <div class="col-lg-6">
+                            <div class="position-relative mb-3">
+                                <img class="img-fluid w-100" src="{{f.profile.url}}" style="object-fit: cover; height: 300px;">
+                                <div class="bg-white border border-top-0 p-4">
+                                    <div class="mb-2">
+                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                            href="{% url 'repair:category' f.category.id %}">{{f.category}}</a>
+                                        <a class="text-body"><small>{{f.date}}</small></a>
+                                    </div>
+                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{% url 'repair:post' f.id %}">{{f.one_topic|slice:"16"}}...</a>
+                                    
+                                </div>
+                                <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle mr-2" src="{{f.publisher.profile_pic.url}}" width="25" height="25" alt="">
+                                        <small>{{f.publisher.user.first_name}} {{f.publisher.user.last_name}}</small>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                        <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510615875274346"
+     crossorigin="anonymous"></script>
+<!-- box -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6510615875274346"
+     data-ad-slot="9424338579"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510615875274346"
+     crossorigin="anonymous"></script>
+<!-- box -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6510615875274346"
+     data-ad-slot="9424338579"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6510615875274346"
+     crossorigin="anonymous"></script>
+<!-- box -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6510615875274346"
+     data-ad-slot="9424338579"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="col-lg-4">
+                    <!-- Social Follow Start -->
+                    <div class="mb-3">
+                        <div class="section-title mb-0">
+                            <h4 class="m-0 text-uppercase font-weight-bold">Follow Us</h4>
+                        </div>
+                       
+                        <div class="bg-white border border-top-0 p-3">
+                            {% if web.facebook %}
+                            <a href="{{web.facebook}}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #39569E;">
+                                <i class="fab fa-facebook-f text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                                <span class="font-weight-medium">Facebook Account</span>
+                            </a>
+                            {% endif %}
+                            {% if web.twitter %}
+                            <a href="{{web.twitter}}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #52AAF4;">
+                                <i class="fab fa-twitter text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                                <span class="font-weight-medium">Twitter Account</span>
+                            </a>
+                            {% endif %}
+                            {% if web.telegram %}
+                            <a href="{{web.telegram}}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #0185AE;">
+                                <i class="fab fa-telegram text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                                <span class="font-weight-medium">Telegram Account</span>
+                            </a>
+                            {% endif %}
+                            {% if web.tiktok %}
+                            <a href="{{web.tiktok}}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #454444;">
+                                <i class="fab fa-tiktok text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                                <span class="font-weight-medium">Tiktok Account</span>
+                            </a>
+                            {% endif %}
+                            {% if web.youtube %}
+                            <a href="{{web.youtube}}" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #DC472E;">
+                                <i class="fab fa-youtube text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                                <span class="font-weight-medium">Youtube Account</span>
+                            </a>
+                            {% endif %}
+                            {% if web.email %}
+                            <a href="mailto:{{web.email}}" class="d-block w-100 text-white text-decoration-none" style="background: #055570;">
+                                <i class="fa fa-envelope text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                                <span class="font-weight-medium">Mail Now</span>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <!-- Social Follow End -->
+
+                    
+                    <!-- Ads End -->
+
+                    <!-- Popular News Start -->
+                    {% if five %}
+                    <div class="mb-3">
+                        <div class="section-title mb-0">
+                            <h4 class="m-0 text-uppercase font-weight-bold">More Blogs</h4>
+                        </div>
+                        <div class="bg-white border border-top-0 p-3">
+                            {% for f in five %}
+                            <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                                <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                                    <div class="mb-2">
+                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="{% url 'repair:category' f.category.id %}">{{f.category}}</a>
+                                        <a class="text-body"><small>{{f.date}}</small></a>
+                                    </div>
+                                    <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="{% url 'repair:post' f.id %}">{{f.one_topic|slice:"15"}}...</a>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    <!-- Popular News End -->
+                    <!-- Tags Start -->
+                    <div class="mb-3">
+                        <div class="section-title mb-0">
+                            <h4 class="m-0 text-uppercase font-weight-bold">Tags</h4>
+                        </div>
+                        <div class="bg-white border border-top-0 p-3">
+                            <div class="d-flex flex-wrap m-n1">
+                                {% for a in category %}
+                                <a href="{% url 'repair:category' a.id %}" class="btn btn-sm btn-outline-secondary m-1">{{a.name}}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tags End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- News With Sidebar End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
+        <div class="row py-4">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="mb-4 text-white text-uppercase font-weight-bold">Get In Touch</h5>
+                <p class="font-weight-medium"><i class="fa fa-map-marker-alt mr-2"></i>{{web.address}}</p>
+                <p class="font-weight-medium"><i class="fa fa-phone-alt mr-2"></i>{{web.phone}}</p>
+                <p class="font-weight-medium"><i class="fa fa-envelope mr-2"></i>{{web.email}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center">&copy; <a href="{% url 'repair:index' %}">{{web.name}}</a>. All Rights Reserved. 
+    </div>
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/blog/lib/easing/easing.min.js"></script>
+    <script src="/static/blog/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/static/blog/js/main.js"></script>
+    
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/js/functions.js" type="text/javascript"></script>
+    <script>
+var currentdate = new Date(); 
+var datetime = "Last Sync: " + currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " @ "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+        document.getElementById('date').innerHTML = datetime;
+    </script>
+</body>
+
+</html>

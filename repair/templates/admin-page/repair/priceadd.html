@@ -1,0 +1,88 @@
+{% extends 'admin-page/base.html' %} 
+{% block main %}
+<div id="main-container">
+    <div class="elts">
+      <div class="main-block">
+        <h1>Add new Price</h1>
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <hr>
+          <label id="icon" for="name"><i class="fas fa-pen"></i> Price</label>
+          <input type="text" style="margin-top: 10px;" name="one" id="name" placeholder="Enter the name" required/><br><br>
+        <br><br>
+          <label id="icon" ><i class="fa fa-mobile"></i> Device</label><br>
+         
+          <select name="two" id="subject">
+            <option value="">Select device</option>
+          </select>
+
+     <br><br>
+          <label id="icon" ><i class="fa fa-mobile"></i> Model</label>
+      
+          <select name="three" id="topic">
+            <option value="" selected="selected">
+              Please select device first
+            </option>
+          </select>
+
+         <br><br>
+          <label id="icon" ><i class="fa fa-mobile"></i> Problems</label>
+          
+          <select name="four" id="chapter">
+            <option value="" selected="selected">
+              Please select brand first
+            </option>
+          </select>
+          <hr>
+          <div class="btn-block">
+            <button type="submit" name="add">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block script %}
+<script>
+    var subjectObject = {
+      {% for b in brand %}
+      "{{b.name}}": {
+          {% for c in b.model_set.all %}
+        "{{c.name}}": [
+          {% for d in c.problem_set.all %}"{{d.name}}",{% endfor %}
+        ],
+        {% endfor %}
+      },
+      {% endfor %}
+    };
+    window.onload = function () {
+      var subjectSel = document.getElementById("subject");
+      var topicSel = document.getElementById("topic");
+      var chapterSel = document.getElementById("chapter");
+      for (var x in subjectObject) {
+        subjectSel.options[subjectSel.options.length] = new Option(x, x);
+      }
+      subjectSel.onchange = function () {
+        //empty Chapters- and Topics- dropdowns
+        chapterSel.length = 1;
+        topicSel.length = 1;
+        //display correct values
+        for (var y in subjectObject[this.value]) {
+          topicSel.options[topicSel.options.length] = new Option(y, y);
+        }
+      };
+      topicSel.onchange = function () {
+        //empty Chapters dropdown
+        chapterSel.length = 1;
+        //display correct values
+        var z = subjectObject[subjectSel.value][this.value];
+        for (var i = 0; i < z.length; i++) {
+          chapterSel.options[chapterSel.options.length] = new Option(
+            z[i],
+            z[i]
+          );
+        }
+      };
+    };
+  </script>
+{% endblock %}

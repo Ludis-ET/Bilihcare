@@ -1,0 +1,48 @@
+{% extends 'admin-page/base.html' %} 
+{% block main %}
+ <!-- Page Heading -->
+ <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Edit The FAQ Page Admin {{User.username}}</h1>
+</div>
+<div id="main-container">
+  <div class="elts">
+    <div class="main-block">
+      <h1>Add New FAQ</h1>
+      <form method="POST">
+        {% csrf_token %}
+        <hr>
+        <label id="icon" for="name"><i class="fas fa-question-circle"></i> The question</label>
+        <input type="text" style="margin-top: 10px;" name="one" id="name" placeholder="Write your question here" required/><br><br>
+        <label id="icon" for="name"><i class="fas fa-check-circle"></i> The answer </label>
+        <textarea name="two" id="" style="margin-top: 10px;" cols="30" rows="4"></textarea>
+        <hr>
+        <div class="btn-block">
+          <button type="submit" name="add">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  {% for s in sb %}
+  <div class="elts">
+    <div class="main-block">
+      <h1>Edit existing FAQ</h1>
+      <form method="POST">
+        {% csrf_token %}
+        <hr>
+        <label id="icon" for="name"><i class="fas fa-question-circle"></i> The question</label>
+        <input type="text" style="margin-top: 10px;" value="{{s.question}}" name="one" id="name" placeholder="Write your question here" required/><br><br>
+        <label id="icon" for="name"><i class="fas fa-check-circle"></i> The answer </label>
+        <textarea name="two" id="" style="margin-top: 10px;" cols="30" rows="4">{{s.answer}}</textarea>
+        <input type="text" style="margin-top: 10px;" value="{{s.id}}" hidden name="three" id="name" placeholder="Write your answer here" required/>
+        <hr>
+        <div class="btn-block" style="display: flex;">
+          <button type="submit" style="margin: 10px;" name="edit">Submit</button>
+          <button type="submit" style="margin: 10px;" name="delete">Delete</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

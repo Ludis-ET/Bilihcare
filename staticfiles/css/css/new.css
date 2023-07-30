@@ -1,0 +1,21 @@
+.the-container{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.the-container .element{
+    margin:50px;
+    border:2px solid red;
+    padding:50px;
+    max-width:300px;
+    font-size:20px;
+    font-weight:900;
+    transition:1s ease-in-out;
+    font-family:Proxima nova;
+    border-radius:20px 0px 0px 0px;
+}
+.the-container .element:hover{
+    background:red;
+    color:#fff;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{web.name}} | admin page</title>
+    
+    <!-- Custom fonts for this template-->
+    <link href="/static/admin-page/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/static/admin-page/css/sb-admin-2.css" rel="stylesheet">
+    
+<link rel="shortcut icon" href="{{web.icon.url}}">
+
+</head>
+
+<body id="page-top">
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Terms and Conditions</h6>
+    </div>
+    <div class="card-body">
+        <div class="text-center">
+            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                src="/static/admin-page/img/undraw_terms_re_6ak4.svg" alt="...">
+        </div>
+        <p>Terms & Conditions:</p>
+        <p>
+            <ol type="1">
+                <li>The Service shall be governed by and construed in accordance with the laws of Ethiopia, excluding its conflict of law provisions.</li>
+                <li>The client shall supply accurate contact information such as Name, Phone Number, Email Address, and the device's IMEI Number.</li>
+                <li>The Service Provider is dedicated to protecting the client's personal data from any unauthorized access and shall not use the information for any purpose beyond the service transaction. However, it's the client's responsibility to create a data back-up as the service provider shall not be held responsible for loss of data.</li>
+                <li>The client should provide a brief description as well as other pertinent remarks regarding the problem of the device. A final, non-negotiable quotation shall then be provided to the client as basis of payment.</li>
+                <li>All services will include free pick-up and delivery.</li>
+                <li>All devices received by Bilihcare will be sent directly to diagnostic department. After diagnostic if there will be any other damage, other than mentioned, the customer is responsible.</li>
+                <li>The service provider's after-service warranty does not cover the following condition:</li>
+                <ol type="i">
+                    <li>Body or frame damage caused by mishandling.</li>
+                    <li>Water Damage.</li>
+                    <li>Damage from subsequent vertical falls, whether intentional or otherwise.</li>
+                    <li>Internal hardware tampering.</li>
+                    <li>Damage resulting from repairs other than Bilihcare.</li>
+                    <li>Software issue unrelated to the repair.</li>
+                    <li>New Damages unrelated to the original repair.</li>
+                    <li>Any losses of data occurring as a result of the repair.</li>
+                </ol>
+                <li>90 days warranty only provided for Touch and LCD components other than this the normal warranty provide for all component is 30 days.</li>
+                <li>6 months warranty provided for glass replacements only.</li>
+                <li>Company shall not be responsible for the device not being collected within 15 days of the repair.</li>
+                <li>In case of refurbishment of screen there is a chance of screen failure, in that case high quality screen with a warranty of 3 months will be provided from Bilihcare service centers. For the cases of 100% OG products, pricing may vary.</li>
+                <li>For curved screen glass replacements, the company shall not take any risk over the LCD. The job shall be done only when permitted from the client's end. In case of failure, the company shall not be responsible.</li>
+            </ol>
+        </p>
+        <a target="_blank" rel="nofollow" href="{% url 'repair:index' %}">back to {{web.name}}.</a>
+    </div>
+</div>
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="/static/admin-page/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/admin-page/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/static/admin-page/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/static/admin-page/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/static/admin-page/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/static/admin-page/js/demo/chart-area-demo.js"></script>
+    <script src="/static/admin-page/js/demo/chart-pie-demo.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+{% extends 'admin-page/base.html' %} 
+{% block main %}
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Edit your Webpack</h1>
+</div>
+<div id="main-container">
+    <div class="elts">
+        <div class="main-block">
+          <h1>Webpack</h1>
+          <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <hr>
+            <label id="icon" for="name"><i class="fas fa-image"></i> Website Logo</label>
+            <input type="file" style="margin-top: 10px;" name="one" id="name" placeholder="logo"  /><br><br>
+            <label id="icon" for="name"><i class="fas fa-pen"></i> Website Name</label>
+            <input type="text" style="margin-top: 10px;" name="two" id="name" placeholder="Name" value="{{web.name}}" />
+            <hr>
+            <div class="btn-block">
+              <button type="submit" name="first">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  <div class="elts">
+    <div class="main-block">
+      <h1>Edit your social media links</h1>
+      <form method="POST">
+        {% csrf_token %}
+        <hr>
+        <label id="icon" for="name"><i class="fab fa-youtube"></i> youtube</label>
+        <input type="url" style="margin-top: 10px;" name="one" id="name" placeholder="youtube Address" value="{{web.youtube}}" /><br><br>
+        <label id="icon" for="name"><i class="fab fa-facebook"></i> Facebook</label>
+        <input type="url" style="margin-top: 10px;" name="two" id="name" placeholder="Facebook address" value="{{web.facebook}}" />
+        <label id="icon" for="name"><i class="fab fa-telegram"></i> Telegram</label>
+        <input type="url" style="margin-top: 10px;" name="three" id="name" placeholder="Telegram Address" value="{{web.telegram}}" />
+        <label id="icon" for="name"><i class="fa fa-phone"></i> what's up</label>
+        <input type="url" style="margin-top: 10px;" name="four" id="name" placeholder="Whatsup address" value="{{web.whatsup}}" />
+        <label id="icon" for="name"><i class="fab fa-tiktok"></i> Tiktok</label>
+        <input type="url" style="margin-top: 10px;" name="five" id="name" placeholder="Tiktok address" value="{{web.tiktok}}" />
+        <label id="icon" for="name"><i class="fa fa-phone"></i> phone</label>
+        <input type="text" style="margin-top: 10px;" name="six" id="name" placeholder="phone address" value="{{web.phone}}" />
+        <label id="icon" for="name"><i class="fa fa-map-marker"></i> Address</label>
+        <input type="text" style="margin-top: 10px;" name="seven" id="name" placeholder="phone address" value="{{web.address}}" />
+        <label id="icon" for="name"><i class="fa fa-envelope"></i> Email Address</label>
+        <input type="text" style="margin-top: 10px;" name="eight" id="name" placeholder="phone address" value="{{web.email}}" />
+        <label id="icon" for="name"><i class="fab fa-instagram"></i> Instagram</label>
+        <input type="text" style="margin-top: 10px;" name="nine" id="name" placeholder="phone address" value="{{web.instagram}}" />
+        <hr>
+        <div class="btn-block">
+          <button type="submit" name="second">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

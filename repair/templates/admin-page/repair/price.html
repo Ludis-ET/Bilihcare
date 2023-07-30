@@ -1,0 +1,95 @@
+{% extends 'admin-page/base.html' %} 
+{% block main %}
+<div id="main-container">
+    {% for a in ab %}
+    <div class="elts">
+      <div class="main-block">
+        <h1>Edit Price 
+        </h1>
+        <form method="POST">
+          {% csrf_token %}
+          
+          <hr>
+          <label id="icon" for="name"><i class="fas fa-pen"></i> Price</label>
+          <input type="text" style="margin-top: 10px;" name="one" id="name" value="{{a.amount}}" placeholder="Enter the name" required/><br><br>
+        <br><br>
+          <label id="icon" ><i class="fa fa-mobile"></i> Brand</label><br>
+         
+          <select name="" id="subject">
+            <option value="{{a.brand}}">{{a.brand}}</option>
+          </select>
+
+     <br><br>
+          <label id="icon" ><i class="fa fa-mobile"></i> Model</label>
+      
+          <select name="" id="topic">
+            <option value="{{a.model}}" selected="selected">
+                {{a.model}}
+            </option>
+          </select>
+
+         <br><br>
+          <label id="icon" ><i class="fa fa-mobile"></i> Problems</label>
+          
+          <select name="" id="chapter">
+            <option value="{{a.problem}}" selected="selected">
+                {{a.problem}}
+            </option>
+          </select>
+          <textarea name="two" id="" style="margin-top: 10px;" hidden cols="30" rows="4">{{a.id}}</textarea>
+          <hr>
+          <div class="btn-block" style="display: flex;">
+            <button type="submit" style="margin: 10px;" name="edit">Submit</button>
+            <button type="submit" style="margin: 10px;" name="delete">Delete</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+{% endblock %}
+{% block script %}
+<script>
+    var subjectObject = {
+      {% for b in brand %}
+      "{{b.name}}": {
+          {% for c in b.model_set.all %}
+        "{{c.name}}": [
+          {% for d in c.problem_set.all %}"{{d.name}}",{% endfor %}
+        ],
+        {% endfor %}
+      },
+      {% endfor %}
+    };
+    window.onload = function () {
+      var subjectSel = document.getElementById("subject");
+      var topicSel = document.getElementById("topic");
+      var chapterSel = document.getElementById("chapter");
+      for (var x in subjectObject) {
+        subjectSel.options[subjectSel.options.length] = new Option(x, x);
+      }
+      subjectSel.onchange = function () {
+        //empty Chapters- and Topics- dropdowns
+        chapterSel.length = 1;
+        topicSel.length = 1;
+        //display correct values
+        for (var y in subjectObject[this.value]) {
+          topicSel.options[topicSel.options.length] = new Option(y, y);
+        }
+      };
+      topicSel.onchange = function () {
+        //empty Chapters dropdown
+        chapterSel.length = 1;
+        //display correct values
+        var z = subjectObject[subjectSel.value][this.value];
+        for (var i = 0; i < z.length; i++) {
+          chapterSel.options[chapterSel.options.length] = new Option(
+            z[i],
+            z[i]
+          );
+        }
+      };
+    };
+  </script>
+{% endblock %}

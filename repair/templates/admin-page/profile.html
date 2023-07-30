@@ -1,0 +1,47 @@
+{% extends 'admin-page/base.html' %} 
+{% block main %}
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Edit your profile</h1>
+</div>
+<div id="main-container">
+  <div class="elts">
+    <div class="main-block">
+      <h1>Edit your personal data</h1>
+      <form method="POST">
+        {% csrf_token %}
+        <hr>
+        <label id="icon" for="name"><i class="fas fa-user"></i> First Name</label>
+        <input type="text" style="margin-top: 10px;" name="one" id="name" value="{{User.first_name}}" placeholder="First Name" required/><br><br>
+        <label id="icon" for="name"><i class="fas fa-user"></i> Last Name</label>
+        <input type="text" style="margin-top: 10px;" name="two" id="name" value="{{User.last_name}}" placeholder="last name" required/>
+        <label id="icon" for="name"><i class="fas fa-envelope"></i> Email Address</label>
+        <input type="email" style="margin-top: 10px;" name="three" id="name" value="{{User.email}}" placeholder="email address" required/>
+        <input type="text" hidden style="margin-top: 10px;" name="four" id="name" value="{{User.id}}" placeholder="email address" required/>
+        <hr>
+        <div class="btn-block">
+          <button type="submit" name="first">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="elts">
+    <div class="main-block">
+      <h1>Edit your User data</h1>
+      <form method="POST">
+        {% csrf_token %}
+        <hr>
+        <label id="icon" for="name"><i class="fas fa-user"></i> Username</label>
+        <input type="text" style="margin-top: 10px;" name="one" id="name" value="{{User.username}}" placeholder="First Name" required/><br><br>
+        <label id="icon" for="name"><i class="fas fa-lock"></i> Password</label>
+        <input type="password" style="margin-top: 10px;" name="two" id="name" placeholder="Password" required/>
+        <label id="icon" for="name"><i class="fas fa-lock"></i> Confirm Password</label>
+        <input type="password" style="margin-top: 10px;" name="three" id="name"" placeholder="Confirm Password" required/>
+        <hr>
+        <div class="btn-block">
+          <button type="submit" name="second">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

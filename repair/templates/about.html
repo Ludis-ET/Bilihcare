@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}About Us{% endblock %}
+{% block name %}About Us{% endblock %}
+{% block main %}
+<!--Featured Receipes -->
+{% if new %}
+<section id="news" class="bg_grey padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+      <h2 class="heading">What's New</h2>
+      <hr class="heading_space">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="cheffs_wrap_slider">
+          <div id="news-slider" class="owl-carousel">
+            {% for a in new %}
+            <div class="item">
+              <div class="news_content">
+               <img src="{{a.image.url}}" alt="Docotor">
+               <div class="comment_text">
+                 <h3>{{a.name}}</h3>
+                 <p>{{a.disc}}</p>
+               </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endif %}
+
+
+{% for a in ab %}
+<section id="overview" class="padding-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+         <h2 class="heading">{{a.title}}</h2>
+         <hr class="heading_space">
+         <p>{{a.p1}}</p>
+         {% if a.p2 %}
+         <p>{{a.p2}}</p>
+         {% endif %}
+         {% if a.p3 %}
+         <p>{{a.p3}}</p>
+         {% endif %}
+         {% if a.p4 %}
+         <p>{{a.p4}}</p>
+         {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+{% endblock %}

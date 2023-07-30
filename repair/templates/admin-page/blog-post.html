@@ -1,0 +1,160 @@
+{% extends 'admin-page/base.html' %} 
+{% block main %}
+ <!-- Page Heading -->
+ <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Edit The About Page Admin {{User.username}}</h1>
+</div>
+<div id="main-container">
+  <div class="elts" >
+    <div class="main-block" style="width: 500px;">
+      <h1>Add new blogpost</h1>
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <hr>
+        <label id="icon" for="name"><i class="fas fa-list"></i> Level</label>
+        <select name="a" id="">
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+            <option value="four">four</option>
+            <option value="five">five</option>
+        </select><br><br>
+        <label id="icon" for="name"><i class="fas fa-box"></i> Category</label>
+        <select name="b" id="">
+            {% for a in ab %}
+            <option value="{{a.id}}">{{a.name}}</option>
+            {% endfor %}
+        </select><br><br>
+        <label id="icon" for="name"><i class="fas fa-image"></i> The Main Profile Picture</label>
+        <input type="file" style="margin-top: 10px;" name="c" id="name" placeholder="Enter the topic" required/><br><br>
+        <label id="icon" for="name"><i class="fas fa-pen"></i> The Main Topic</label>
+        <input type="text" style="margin-top: 10px;" name="d" id="name" placeholder="Enter the topic" required/><br><br>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 1 (required)</label>
+        <textarea name="e" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.p1}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 2 (optional)</label>
+        <textarea name="f" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.p2}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 3 (optional)</label>
+        <textarea name="g" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.p3}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-image"></i> Second Picture</label>
+        <input type="file" style="margin-top: 10px;" name="h" id="name" placeholder="Enter the topic"/><br><br>
+        <label id="icon" for="name"><i class="fas fa-pen"></i> Sub Topic 1</label>
+        <input type="text" style="margin-top: 10px;" name="i" id="name" placeholder="Enter the topic"/><br><br>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 1 (optional)</label>
+        <textarea name="j" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.p1}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 2 (optional)</label>
+        <textarea name="k" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.p2}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 3 (optional)</label>
+        <textarea name="l" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.p3}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-image"></i> third Picture</label>
+        <input type="file" style="margin-top: 10px;" name="m" id="name" placeholder="Enter the topic"/><br><br>
+        <label id="icon" for="name"><i class="fas fa-pen"></i> Sub Topic 2</label>
+        <input type="text" style="margin-top: 10px;" name="n" id="name" placeholder="Enter the topic"/><br><br>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 1 (optional)</label>
+        <textarea name="o" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.p1}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 2 (optional)</label>
+        <textarea name="p" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.p2}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 3 (optional)</label>
+        <textarea name="q" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.p3}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-image"></i> fourth Picture</label>
+        <input type="file" style="margin-top: 10px;" name="r" id="name" placeholder="Enter the topic"/><br><br>
+        <label id="icon" for="name"><i class="fas fa-pen"></i> Sub Topic 3</label>
+        <input type="text" style="margin-top: 10px;" name="s" id="name" placeholder="Enter the topic"/><br><br>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 1 (optional)</label>
+        <textarea name="t" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.p1}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 2 (optional)</label>
+        <textarea name="u" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.p2}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 3 (optional)</label>
+        <textarea name="v" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.p3}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-image"></i> Link name</label>
+        <input type="text" style="margin-top: 10px;" name="link" id="name" placeholder="Enter the Link name"/><br><br>
+        <label id="icon" for="name"><i class="fas fa-image"></i> Link URL</label>
+        <input type="url" style="margin-top: 10px;" name="url" id="name" placeholder="Enter the url"/><br><br>
+        <hr>
+        <div class="btn-block">
+          <button type="submit" name="add">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  {% for a in ba %}
+  <div class="elts">
+    <div class="main-block">
+      <h1>Edit Blog Post 
+      </h1>
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <hr>
+        <label id="icon" for="name"><i class="fas fa-list"></i> Level</label>
+        <select name="a" id="">
+            <option value="{{a.level}}">{{a.level}}</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+            <option value="four">four</option>
+            <option value="five">five</option>
+        </select><br><br>
+        <label id="icon" for="name"><i class="fas fa-box"></i> Category</label>
+        <select name="b" id="">
+            <option value="{{a.category.id}}">{{a.category.name}}</option>
+            {% for a in ab %}
+            <option value="{{a.id}}">{{a.name}}</option>
+            {% endfor %}
+        </select><br><br>
+        <label id="icon" for="name"><i class="fas fa-image"></i> The Main Profile Picture</label>
+        <input type="file" style="margin-top: 10px;" name="c" id="name" placeholder="Enter the topic"/><br><br>
+        <label id="icon" for="name"><i class="fas fa-pen"></i> The Main Topic</label>
+        <input type="text" style="margin-top: 10px;" name="d" id="name" value="{{a.one_topic}}"/><br><br>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 1 (required)</label>
+        <textarea name="e" id="" style="margin-top: 10px;" cols="30"  rows="4" >{{a.one_p1}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 2 (optional)</label>
+        <textarea name="f" id="" style="margin-top: 10px;" cols="30" rows="4" >{{a.one_p2}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 3 (optional)</label>
+        <textarea name="g" id="" style="margin-top: 10px;" cols="30" rows="4" >{{a.one_p3}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-image"></i> Second Picture</label>
+        <input type="file" style="margin-top: 10px;" name="h"  id="name" placeholder="Enter the topic"/><br><br>
+        <label id="icon" for="name"><i class="fas fa-pen"></i> Sub Topic 1</label>
+        <input type="text" style="margin-top: 10px;" name="i" value="{{a.two_topic}}" id="name" /><br><br>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 1 (optional)</label>
+        <textarea name="j" id="" style="margin-top: 10px;" cols="30" rows="4" >{{a.two_p1}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 2 (optional)</label>
+        <textarea name="k" id="" style="margin-top: 10px;" cols="30" rows="4" >{{a.two_p2}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 3 (optional)</label>
+        <textarea name="l" id="" style="margin-top: 10px;" cols="30" rows="4" >{{a.two_p3}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-image"></i> third Picture</label>
+        <input type="file" style="margin-top: 10px;" name="m" id="name" placeholder="Enter the topic"/><br><br>
+        <label id="icon" for="name"><i class="fas fa-pen"></i> Sub Topic 2</label>
+        <input type="text" style="margin-top: 10px;" name="n" value="{{a.three_topic}}" id="name" /><br><br>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 1 (optional)</label>
+        <textarea name="o" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.three_p1}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 2 (optional)</label>
+        <textarea name="p" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.three_p2}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 3 (optional)</label>
+        <textarea name="q" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.three_p3}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-image"></i> fourth Picture</label>
+        <input type="file" style="margin-top: 10px;" name="r" id="name" placeholder="Enter the topic"/><br><br>
+        <label id="icon" for="name"><i class="fas fa-pen"></i> Sub Topic 3</label>
+        <input type="text" style="margin-top: 10px;" name="s" value="{{a.four_topic}}" id="name" /><br><br>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 1 (optional)</label>
+        <textarea name="t" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.four_p1}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 2 (optional)</label>
+        <textarea name="u" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.four_p2}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-comments"></i> paragraph 3 (optional)</label>
+        <textarea name="v" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.four_p3}}</textarea>
+        <textarea name="w" hidden id="" style="margin-top: 10px;" cols="30" rows="4">{{a.id}}</textarea>
+        <label id="icon" for="name"><i class="fas fa-image"></i> Link name</label>
+        <input type="text" style="margin-top: 10px;" name="link" id="name" value="{{a.link}}"/><br><br>
+        <label id="icon" for="name"><i class="fas fa-image"></i> Link URL</label>
+        <input type="url" style="margin-top: 10px;" name="url" id="name" value="{{a.link_url}}"/><br><br>
+        <hr>
+        <div class="btn-block" style="display: flex;">
+          <button type="submit" style="margin: 10px;" name="edit">Submit</button>
+          <button type="submit" style="margin: 10px;" name="delete">Delete</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'admin-page/base.html' %} 
+{% block main %}
+<table border="2" >
+    <tr>
+        <td style="padding: 10px;">Models</td>
+        <td style="padding: 10px;">Brand</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;"><h1> <a href="{% url 'repair:problemadd' %}">Add new</a></h1></td>
+        <td style="padding: 10px;">{{p.id}}</td>
+    </tr>
+    {% for p in prob %}
+    <tr>
+        <td style="padding: 10px;"><a href="{% url 'repair:problem' p.id %}">{{p.name}}</a></td>
+        <td style="padding: 10px;">{{p.brand}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

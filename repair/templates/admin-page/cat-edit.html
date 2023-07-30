@@ -1,0 +1,50 @@
+{% extends 'admin-page/base.html' %} 
+{% block main %}
+ <!-- Page Heading -->
+ <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Edit The About Page Admin {{User.username}}</h1>
+</div>
+<div id="main-container">
+  <div class="elts">
+    <div class="main-block">
+      <h1>Add new Category</h1>
+      <form method="POST">
+        {% csrf_token %}
+        <hr>
+        <label id="icon" for="name"><i class="fas fa-pen"></i> Category Name</label>
+        <input type="text" style="margin-top: 10px;" name="one" id="name" placeholder="Enter the name" required/><br><br>
+        <label id="icon" for="name"><i class="fas fa-file"></i> Description (optional)</label>
+        <textarea name="two" id="" style="margin-top: 10px;" cols="30" rows="4"></textarea>
+        <hr>
+        <div class="btn-block">
+          <button type="submit" name="add">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  {% for a in ab %}
+  <div class="elts">
+    <div class="main-block">
+      <h1>Edit paragraph 
+      </h1>
+      <form method="POST">
+        {% csrf_token %}
+        
+        <hr>
+        <label id="icon" for="name"><i class="fas fa-pen"></i> Category Name</label>
+        <input type="text" style="margin-top: 10px;" name="one" value="{{a.name}}" id="name" placeholder="Enter the name" required/><br><br>
+        <label id="icon" for="name"><i class="fas fa-file"></i> Description (optional)</label>
+        <textarea name="two" id="" style="margin-top: 10px;" cols="30" rows="4">{{a.disc}}</textarea>
+        <textarea name="six" id="" style="margin-top: 10px;" hidden cols="30" rows="4">{{a.id}}</textarea>
+        <hr>
+        <div class="btn-block" style="display: flex;">
+          <button type="submit" style="margin: 10px;" name="edit">Submit</button>
+          <button type="submit" style="margin: 10px;" name="delete">Delete</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

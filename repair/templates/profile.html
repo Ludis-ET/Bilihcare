@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+{% block css %}
+<style>
+  .alert_box {
+    position: absolute;
+    top: 50%;
+    margin-top: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  .alert_box {
+    padding: 30px;
+    display: flex;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 5px;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.97);
+    transition: all 0.3s ease;
+  }
+  #check:checked ~ .alert_box {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  #check:checked ~ .background {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #check {
+    display: none;
+  }
+  .alert_box .icon {
+    height: 100px;
+    width: 100px;
+    color: #f23b26;
+    border: 3px solid #f23b26;
+    border-radius: 50%;
+    line-height: 97px;
+    font-size: 50px;
+  }
+  .alert_box .header2 {
+    font-size: 35px;
+    font-weight: 500;
+    margin: 10px 0;
+  }
+  .alert_box p {
+    font-size: 20px;
+  }
+  .alert_box .btns {
+    margin-top: 20px;
+  }
+  .btns label {
+    display: inline-flex;
+    height: 55px;
+    padding: 0 30px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 55px;
+    outline: none;
+    margin: 0 10px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background: #2980b9;
+  }
+  .btns label a {
+    text-decoration: none;
+  }
+
+
+  </style>
+{% endblock %}
+{% block title %} Profile Setting{% endblock %}
+{% block name %}Profile{% endblock %}
+{% block main %}
+<br><br><br><br>
+
+<section id="order-form" class="order_section" style="background: #333;">
+    <div class="container order_form padding">
+      <div class="row">
+        <div class="col-md-12 appointment_form">
+          <h2 class="heading">Edit Profile</h2>
+          <hr class="heading_space">
+        <div class="row">  
+         <div class="col-md-8">
+         <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+              <div class="row">
+              <div class="form-group col-md-12">
+              <div id="result" class="text-center"></div></div></div>
+               <div class="row">
+               <div class="form-group col-md-12">
+              <p>Edit your personal data and information</p>
+              </div></div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="" style="color: #fff;">First Name</label>
+                      <input type="text" class="form-control" placeholder="Name" value="{{pp.user.first_name}}"  name="one" id="name"  >
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="" style="color: #fff;">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Name" value="{{pp.user.last_name}}"  name="two" id="name"  >
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="" style="color: #fff;">Username</label>
+                      <input type="text" class="form-control" placeholder="Name" value="{{pp.user.username}}"  name="three" id="name" >
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="" style="color: #fff;">Email</label>
+                        <input type="email" class="form-control" placeholder="Name" value="{{pp.user.email}}"  name="four" id="name" >
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="" style="color: #fff;">Password</label>
+                      <input type="password" class="form-control" placeholder="Password"  name="five" id="four"  >
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="" style="color: #fff;">Confirm Password</label>
+                        <input type="password" class="form-control" placeholder="Confirm Password"  name="six" id="name"  >
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="" style="color: #fff;">Phone Number</label>
+                      <input type="text" class="form-control" placeholder="Name" value="{{pp.phone}}"  name="seven" id="name"  >
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="" style="color: #fff;">Profile Pic</label>
+                        <input type="file" class="form-control" placeholder="Name"   name="eight" id="name" >
+                      </div>
+                  </div>
+                    <div class="form-group">
+                       <div class="btn-submit btn-common-white">
+                      <input type="submit" value="Update" id="btn_order_submit" />
+                      </div>
+                      <a href="{% url 'repair:logout' %}" style="padding: 10px;border-radius: 10px; width: 100px;background-color: red;color: #fff;">logout</a>
+                      {% if pp.is_manager == True %}
+                      <a href="{% url 'repair:admin' %}" style="padding: 10px;border-radius: 10px; width: 100px;background-color: red;color: #fff;">Admin page</a>
+                        {% endif %}
+                        </div>
+                    </div>
+                  </div>
+                </div>
+         </form>
+         <label
+                          for="check"
+                          style="padding: 10px; border-radius: 20px;width:100px; position: fixed;bottom:30px;right:30px;background-color: red;text-align: center;color:#fff;"
+                          >History</label
+                        >
+         <div class="btn-submit btn-common-white">
+          <div class="container">
+            <input type="checkbox" id="check" />
+            <div class="background"></div>
+            <div class="alert_box">
+              <div class="icon">
+                <i class="fas fa-file"></i>
+              </div><br><br>
+              {% if history %}
+              {% for h in history %}
+              <p style="color: #333;">- at {{h.date}} you ordered {{h.device}} {{h.model}} problem.</p><br><br>
+              {% endfor %}
+              {% else %}
+              <p style="color: #333;">- no order history yet.</p><br><br>
+              {% endif %}
+              <div class="btns">
+                <label for="check"> Cancel</label>
+              </div>
+            </div>
+          </div>
+             </div> 
+        </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,154 @@
+{% extends 'admin-page/base.html' %}
+{% block main %}
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Total Users</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{p}}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fa fa-user fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Total Orders</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{a}}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-pen fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Apply Registrations
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{cc}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-file fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pending Requests Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Total Admin Users</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{aa}}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-lock fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="miaw" style="display: flex;flex-wrap: wrap; width: 100%;">
+
+        <!-- Illustrations -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">We're always on a talent-hunt!</h6>
+            </div>
+            <div class="card-body">
+                <div class="text-center">
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                        src="/static/admin-page/img/undraw_posting_photo.svg" alt="...">
+                </div>
+                <p>Going the way for a new business isn't easy. But what if you could have all the benefits of being an entrepreneur with the resources of a bigger company? Opening a franchise might just be the right path for you.
+                    BILIHCARE allows you to branch out and grow, while giving you the opportunity to run our business with the help and support of a larger company as we have a proven formula for success. Of course, for many aspiring business owners, franchising is a much less risky, yet still rewarding, option.
+                    </p>
+                <a target="_blank" rel="nofollow" href="{% url 'repair:index' %}">Go back to the main website &rarr;</a>
+            </div>
+        </div>
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Terms and Conditions</h6>
+            </div>
+            <div class="card-body">
+                <div class="text-center">
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                        src="/static/admin-page/img/undraw_terms_re_6ak4.svg" alt="...">
+                </div>
+                <p>Terms & Conditions:</p>
+                <p>
+                    <ol type="1">
+                        <li>The Service shall be governed by and construed in accordance with the laws of Ethiopia, excluding its conflict of law provisions.</li>
+                        <li>The client shall supply accurate contact information such as Name, Phone Number, Email Address, and the device's IMEI Number.</li>
+                        <li>The Service Provider is dedicated to protecting the client's personal data from any unauthorized access and shall not use the information for any purpose beyond the service transaction. However, it's the client's responsibility to create a data back-up as the service provider shall not be held responsible for loss of data.</li>
+                        <li>The client should provide a brief description as well as other pertinent remarks regarding the problem of the device. A final, non-negotiable quotation shall then be provided to the client as basis of payment.</li>
+                        <li>All services will include free pick-up and delivery.</li>
+                        <li>All devices received by Bilihcare will be sent directly to diagnostic department. After diagnostic if there will be any other damage, other than mentioned, the customer is responsible.</li>
+                        <li>The service provider's after-service warranty does not cover the following condition:</li>
+                        <ol type="i">
+                            <li>Body or frame damage caused by mishandling.</li>
+                            <li>Water Damage.</li>
+                            <li>Damage from subsequent vertical falls, whether intentional or otherwise.</li>
+                            <li>Internal hardware tampering.</li>
+                            <li>Damage resulting from repairs other than Bilihcare.</li>
+                            <li>Software issue unrelated to the repair.</li>
+                            <li>New Damages unrelated to the original repair.</li>
+                            <li>Any losses of data occurring as a result of the repair.</li>
+                        </ol>
+                        <li>90 days warranty only provided for Touch and LCD components other than this the normal warranty provide for all component is 30 days.</li>
+                        <li>6 months warranty provided for glass replacements only.</li>
+                        <li>Company shall not be responsible for the device not being collected within 15 days of the repair.</li>
+                        <li>In case of refurbishment of screen there is a chance of screen failure, in that case high quality screen with a warranty of 3 months will be provided from Bilihcare service centers. For the cases of 100% OG products, pricing may vary.</li>
+                        <li>For curved screen glass replacements, the company shall not take any risk over the LCD. The job shall be done only when permitted from the client's end. In case of failure, the company shall not be responsible.</li>
+                    </ol>
+                </p>
+                <a target="_blank" rel="nofollow" href="{% url 'repair:index' %}">back to {{web.name}}.</a>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+
+</div>
+{% endblock %}

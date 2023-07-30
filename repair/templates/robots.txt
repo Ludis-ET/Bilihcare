@@ -1,0 +1,4 @@
+User-Agent: Googlebot
+Disallow: [disallowed URL]
+
+Sitemap: https://bilihcare.com/sitemap.xml

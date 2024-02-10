@@ -1,1 +1,0 @@
-web: gunicorn ludis.wsgi --log-file -

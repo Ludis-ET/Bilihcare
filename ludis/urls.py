@@ -12,6 +12,8 @@ sitemaps = {
     'posts':StaticSitemap
 }
 
+admin.site.name = "Ludis"
+admin.site.site_header = "Ludis Administration"
 
 urlpatterns = [
     path('admin-ludis/', admin.site.urls),

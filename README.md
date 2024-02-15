@@ -171,7 +171,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+[![Product Name Screen Shot][static/readme/screencapture-localhost-8000-admin-page-2024-02-15-19_46_08.png]](static/readme/screencapture-localhost-8000-admin-page-2024-02-15-19_46_08.png)
 
 <!-- USAGE EXAMPLES -->
 ## Usage

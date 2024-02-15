@@ -83,8 +83,10 @@ DATABASES = {
     'PASSWORD': 'aP93WnuVKdfF',
     'HOST': 'ep-purple-boat-a5o3pb0m-pooler.us-east-2.aws.neon.tech',
     'PORT': '5432',
-    'OPTIONS': {'sslmode': 'require'},
-    'DISABLE_SERVER_SIDE_CURSORS': True,
+    'OPTIONS': {
+            'sslmode': 'require',
+            'options': 'endpoint=ep-replace-this-12345679',
+    },
   }
 }
 

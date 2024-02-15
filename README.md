@@ -136,20 +136,24 @@ This is an example of how to list things you need to use the software and how to
 
 _Below is an example of how you can instruct your audience on installing and setting up this project into your local machine and run_
 
-1. Clone the repo
+1. **Clone the repo**
    ```sh
    git clone https://github.com/Ludis-ET/Bilihcare.git
    ```
-2. Navigate to the project directory
+
+2. **Navigate to the project directory**
    ```sh
    cd Bilihcare
    ```
-3. Create a virtual environment
-   ```js
+
+3. **Create a virtual environment**
+   ```sh
    python -m venv venv
-3. Activate the virtual environment
-  * On Windows:
-   ```js
+   ```
+
+3. **Activate the virtual environment**
+  - On Windows:
+   - ```js
    .\venv\Scripts\activate
    ```
 3. Create a virtual environment

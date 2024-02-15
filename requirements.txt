@@ -6,7 +6,6 @@ django-cors-headers==3.13.0
 gunicorn==20.1.0
 mysql-connector-python==8.0.6
 pillow==10.2.0
-psycopg3
 psycopg2-binary==2.9.9
 pycodestyle==2.9.1
 python-decouple==3.8

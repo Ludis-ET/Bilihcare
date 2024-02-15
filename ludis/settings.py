@@ -80,7 +80,10 @@ DATABASES = {
     'PASSWORD': 'XSn74iQcolKq',
     'HOST': 'ep-purple-boat-a5o3pb0m.us-east-2.aws.neon.tech',
     'PORT': '5432',
-    'OPTIONS': {'sslmode': 'require'},
+    'OPTIONS': {
+            'options': '-c search_path=public',
+            'sslmode': 'require',  # This enables SSL
+    },
   }
 }
 

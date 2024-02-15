@@ -151,17 +151,26 @@ _Below is an example of how you can instruct your audience on installing and set
    python -m venv venv
    ```
 
-3. **Activate the virtual environment**
+4. **Activate the virtual environment**
   - On Windows:
-   - ```js
+   ```sh
    .\venv\Scripts\activate
    ```
-3. Create a virtual environment
-   ```js
-   python -m venv venv
-3. Create a virtual environment
-   ```js
-   python -m venv venv
+  - On Unix or MacOS:
+   ```sh
+   source venv/bin/activate
+   ```
+5. **Install required packages**
+   ```sh
+   pip install -r requirements.txt
+   ```
+6. **Apply migrations**
+   ```sh
+   python manage.py migrate
+   ```
+7. **Run the development server**
+   ```sh
+   python manage.py runserver
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -171,15 +180,14 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Remember to replace `3.9.18` with your preferred Python version if it's different. If you have any specific API keys or configuration steps related to your Django app, you can include them in the relevant sections of this guide.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- ROADMAP -->
+<!-- ROADMAP
 ## Roadmap
 
 - [x] Add Changelog
@@ -188,11 +196,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Add "components" document to easily copy & paste sections of the readme
 - [ ] Multi-language Support
     - [ ] Chinese
-    - [ ] Spanish
+    - [ ] Spanish -->
 
 See the [open issues](https://github.com/Ludis-et/Bilihcare/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
@@ -226,15 +234,14 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Your Name - [@your_twitter](https://twitter.com/lulsgd) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/ludis-et/bilihcare](https://github.com/ludis-et/bilihcare)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- ACKNOWLEDGMENTS -->
+<!-- 
 ## Acknowledgments
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
@@ -248,7 +255,7 @@ Use this space to list resources you find helpful and would like to give credit 
 * [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 

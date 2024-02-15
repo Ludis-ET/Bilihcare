@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -73,15 +74,15 @@ WSGI_APPLICATION = 'ludis.wsgi.application'
 # To use Neon with Django, you have to create a Project on Neon and specify the project connection settings in your settings.py in the same way as for standalone Postgres.
 
 DATABASES = {
-  'default': {
-    'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'verceldb',
-    'USER': 'default',
-    'PASSWORD': 'xK7bZGg5OwsS',
-    'HOST': 'ep-wispy-sun-a4fb7fc4-pooler.us-east-1.aws.neon.tech',
-    'PORT': '5432',
-    'OPTIONS': {'sslmode': 'require'},
-  }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DB_NAME', default='verceldb'),
+        'USER': config('DB_USER', default='default'),
+        'PASSWORD': config('DB_PASSWORD', default='xK7bZGg5OwsS'),
+        'HOST': config('DB_HOST', default='ep-wispy-sun-a4fb7fc4-pooler.us-east-1.aws.neon.tech'),
+        'PORT': config('DB_PORT', default='5432'),
+        'OPTIONS': {'sslmode': 'require'},
+    }
 }
 
 

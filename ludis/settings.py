@@ -75,10 +75,10 @@ WSGI_APPLICATION = 'ludis.wsgi.application'
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'Bilihcare',
-    'USER': 'Ludis-ET',
-    'PASSWORD': 'XSn74iQcolKq',
-    'HOST': 'ep-purple-boat-a5o3pb0m.us-east-2.aws.neon.tech',
+    'NAME': 'verceldb',
+    'USER': 'default',
+    'PASSWORD': 'xK7bZGg5OwsS',
+    'HOST': 'ep-wispy-sun-a4fb7fc4-pooler.us-east-1.aws.neon.tech',
     'PORT': '5432',
     'OPTIONS': {'sslmode': 'require'},
   }

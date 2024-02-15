@@ -171,7 +171,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-[![Product Name Screen Shot][static/readme/screencapture-localhost-8000-admin-page-2024-02-15-19_46_08.png]](static/readme/screencapture-localhost-8000-admin-page-2024-02-15-19_46_08.png)
+[![Product Name Screen Shot][product-screenshott]](static/readme/screencapture-localhost-8000-admin-page-2024-02-15-19_46_08.png)
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -270,6 +270,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: static/readme/screencapture-bilihcare-vercel-app-2024-02-15-18_50_59.png
+[product-screenshott]: static/readme/screencapture-localhost-8000-admin-page-2024-02-15-19_46_08.png
 
 [Next.js]:  https://img.shields.io/badge/Django?style=for-the-badge&logo=django
 [Next-url]: https://www.djangoproject.com/

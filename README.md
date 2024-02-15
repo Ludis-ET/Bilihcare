@@ -65,7 +65,7 @@
 <!-- ABOUT THE PROJECT -->
 
 
-[![Product Name Screen Shot][product-screenshot]](static/screencapture-bilihcare-vercel-app-2024-02-15-18_50_59.png)
+[![Product Name Screen Shot][product-screenshot]](static/readme/screencapture-bilihcare-vercel-app-2024-02-15-18_50_59.png)
 
 ## About The Project
 
@@ -136,18 +136,28 @@ This is an example of how to list things you need to use the software and how to
 
 _Below is an example of how you can instruct your audience on installing and setting up this project into your local machine and run_
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/Ludis-ET/Bilihcare.git
    ```
-3. Install NPM packages
+2. Navigate to the project directory
    ```sh
-   npm install
+   cd Bilihcare
    ```
-4. Enter your API in `config.js`
+3. Create a virtual environment
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   python -m venv venv
+3. Activate the virtual environment
+  *On Windows:
+   ```js
+   .\venv\Scripts\activate
+   ```
+3. Create a virtual environment
+   ```js
+   python -m venv venv
+3. Create a virtual environment
+   ```js
+   python -m venv venv
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -148,7 +148,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```js
    python -m venv venv
 3. Activate the virtual environment
-  *On Windows:
+  * On Windows:
    ```js
    .\venv\Scripts\activate
    ```

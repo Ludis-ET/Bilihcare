@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Ludis-et/Bilihcare">
-    <img src="media/logo.png" alt="Logo" width="80" height="80">
+    <img src="static/readme/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Best-README-Template</h3>

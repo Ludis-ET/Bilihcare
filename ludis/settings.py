@@ -80,7 +80,7 @@ DATABASES = {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'bilihcare',
     'USER': 'Ludis-ET',
-    'PASSWORD': 'aP93WnuVKdfF',
+    'PASSWORD': 'Ant7MJrekf0o',
     'HOST': 'ep-purple-boat-a5o3pb0m-pooler.us-east-2.aws.neon.tech',
     'PORT': '5432',
     'OPTIONS': {

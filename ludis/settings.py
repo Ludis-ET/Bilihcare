@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'ludis.wsgi.application'
 
 DATABASES = {
   'default': {
-    'ENGINE': 'django.db.backends.postgresql',
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
     'NAME': 'bilihcare',
     'USER': 'Ludis-ET',
     'PASSWORD': 'XSn74iQcolKq',

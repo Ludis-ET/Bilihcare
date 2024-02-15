@@ -1,5 +1,5 @@
 import os
-
+import psycopg2
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -71,11 +71,18 @@ WSGI_APPLICATION = 'ludis.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# To use Neon with Django, you have to create a Project on Neon and specify the project connection settings in your settings.py in the same way as for standalone Postgres.
+
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'bilihcare',
+    'USER': 'Ludis-ET',
+    'PASSWORD': 'aP93WnuVKdfF',
+    'HOST': 'ep-purple-boat-a5o3pb0m.us-east-2.aws.neon.tech',
+    'PORT': '5432',
+    'OPTIONS': {'sslmode': 'require'},
+  }
 }
 
 

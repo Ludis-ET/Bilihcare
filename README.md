@@ -275,7 +275,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
 
-[Next.js]: https://img.shields.io/badgedjango-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next.js]:  https://img.shields.io/badge/Django?style=for-the-badge&logo=django
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/

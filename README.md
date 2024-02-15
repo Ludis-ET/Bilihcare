@@ -276,7 +276,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [product-screenshot]: images/screenshot.png
 
 [Next.js]:  https://img.shields.io/badge/Django?style=for-the-badge&logo=django
-[Next-url]: https://nextjs.org/
+[Next-url]: https://www.djangoproject.com/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D

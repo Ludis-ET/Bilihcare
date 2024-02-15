@@ -79,10 +79,9 @@ DATABASES = {
     'NAME': 'bilihcare',
     'USER': 'Ludis-ET',
     'PASSWORD': 'XSn74iQcolKq',
-    'HOST': 'ep-purple-boat-a5o3pb0m-pooler.us-east-2.aws.neon.tech',
+    'HOST': 'ep-purple-boat-a5o3pb0m.us-east-2.aws.neon.tech',
     'PORT': '5432',
     'OPTIONS': {'sslmode': 'require'},
-    'DISABLE_SERVER_SIDE_CURSORS': True,
   }
 }
 

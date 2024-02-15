@@ -65,7 +65,7 @@
 <!-- ABOUT THE PROJECT -->
 
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](static/screencapture-bilihcare-vercel-app-2024-02-15-18_50_59.png)
 
 ## About The Project
 

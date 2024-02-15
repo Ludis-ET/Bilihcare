@@ -11,7 +11,7 @@
             {% csrf_token %}
             <hr>
             <label id="icon" for="name"><i class="fas fa-image"></i> Website Logo</label>
-            <input type="file" style="margin-top: 10px;" name="one" id="name" placeholder="logo"  /><br><br>
+            <input type="file" disabled style="margin-top: 10px;" name="one" id="name" placeholder="logo"  /><br><br>
             <label id="icon" for="name"><i class="fas fa-pen"></i> Website Name</label>
             <input type="text" style="margin-top: 10px;" name="two" id="name" placeholder="Name" value="{{web.name}}" />
             <hr>

@@ -74,16 +74,13 @@ WSGI_APPLICATION = 'ludis.wsgi.application'
 
 DATABASES = {
   'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'bilihcare',
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'Bilihcare',
     'USER': 'Ludis-ET',
     'PASSWORD': 'XSn74iQcolKq',
     'HOST': 'ep-purple-boat-a5o3pb0m.us-east-2.aws.neon.tech',
     'PORT': '5432',
-    'OPTIONS': {
-            'options': '-c search_path=public',
-            'sslmode': 'require',  # This enables SSL
-    },
+    'OPTIONS': {'sslmode': 'require'},
   }
 }
 

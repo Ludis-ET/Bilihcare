@@ -80,6 +80,7 @@ DATABASES = {
     'PASSWORD': 'xK7bZGg5OwsS',
     'HOST': 'ep-wispy-sun-a4fb7fc4-pooler.us-east-1.aws.neon.tech',
     'PORT': '5432',
+    'OPTIONS': {'sslmode': 'require'},
   }
 }
 
